@@ -2,11 +2,11 @@
 
 class RepositorioCasa
 {
-    public function cadastrar(Casa $Casa)
+    public function cadastrar(PDO $banco, Casa $Casa)
     {
         $sqlInsert = "INSERT INTO CASA(endereco,tamanho,numeroquartos,valor,anoconst) VALUES (:e,:t,:nq,:v,:ac)";
 
-        $insert = $Casa->prepare($sqlInsert);
+        $insert = $banco->prepare($sqlInsert);
 
         $endereco = $Casa->exibirEndereco();
         $tamanho = $Casa->exibirTamanho();
@@ -23,8 +23,8 @@ class RepositorioCasa
         $insert->execute();
     }
     
-    public function exibirTudo(PDO $banco){
-        $sql = "SELECT * FROM AUTOR";
+    public function exibirTudo(PDO $banco){ 
+        $sql = "SELECT * FROM CASA";
         $dado = $banco->query($sql);
         return $dado->fetchAll(PDO::FETCH_ASSOC);
     }
