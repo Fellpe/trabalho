@@ -2,12 +2,12 @@
 
 class Casa{
     private string $endereco;
-    private float $tamanho;
+    private string $tamanho;
     private string $numeroquartos;
-    private float $valor;
+    private string $valor;
     private string $anoconst;
 
-    public function __construct(string $e,float $t,string $nq,float $v,string $ac){
+    public function __construct(string $e,string $t,string $nq,string $v,string $ac){
         $this->definirEndereco($e);
         $this->definirTamanho($t);
         $this->definirNumeroQuartos($nq);
@@ -18,14 +18,14 @@ class Casa{
     public function definirEndereco(string $e){
         $this->endereco = $e;
     }
-    public function definirTamanho(float $t){
+    public function definirTamanho(string $t){
         $this->tamanho = $t;
     }
     public function definirNumeroQuartos(string $nq){
         $this->numeroquartos = $nq;
     }
 
-    public function definirValor(float $v){
+    public function definirValor(string $v){
         $this->valor = $v;
     }
 
