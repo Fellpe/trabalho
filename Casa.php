@@ -1,12 +1,12 @@
 <?php
-
+//está definindo as classes
 class Casa{
     private string $endereco;
     private string $tamanho;
     private string $numeroquartos;
     private string $valor;
     private string $anoconst;
-
+//Vai ser executado quando instanciado o objeto
     public function __construct(string $e,string $t,string $nq,string $v,string $ac){
         $this->definirEndereco($e);
         $this->definirTamanho($t);
@@ -14,7 +14,7 @@ class Casa{
         $this->definirValor($v);
         $this->definirAnoConstrucao($ac);
     }
-
+//Funções de operações dos objetos
     public function definirEndereco(string $e){
         $this->endereco = $e;
     }
